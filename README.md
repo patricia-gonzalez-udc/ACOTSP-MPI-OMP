@@ -110,28 +110,51 @@ The executable 'acotsp' provides the following command line options
 (given are the short and the long options):
 
 -r, --tries          # number of independent trials
+
 -s, --tours          # number of steps in each trial
+
 -t, --time           # maximum time for each trial
+
     --seed           # seed for the random number generator 
+    
 -i, --tsplibfile     f inputfile (TSPLIB format necessary)
+
 -o, --optimum        # stop if tour better or equal optimum is found
+
 -m, --ants           # number of ants
+
 -g, --nnants         # nearest neighbours in tour construction
+
 -a, --alpha          # alpha (influence of pheromone trails)
+
 -b, --beta           # beta (influence of heuristic information)
+
 -e, --rho            # rho: pheromone trail evaporation
+
 -q, --q0             # q_0: prob. of best choice in tour construction
+
 -c, --elitistants    # number of elitist ants
+
 -f, --rasranks       # number of ranks in rank-based Ant System
+
 -k, --nnls           # No. of nearest neighbors for local search
+
 -l, --localsearch    0: no local search   1: 2-opt   2: 2.5-opt   3: 3-opt
+
 -d, --dlb            1 use don't look bits in local search
+
 -u, --as               apply basic Ant System
+
 -v, --eas              apply elitist Ant System
+
 -w, --ras              apply rank-based version of Ant System
+
 -x, --mmas             apply MAX-MIN ant system
+
 -y, --bwas             apply best-worst ant system
+
 -h, --help             display the help text and exit
+
 
 Options -u --as, -v --eas, -w --ras, -x --mmas, -y --bwas, 
 -h, --help don't need arguments, while all the others do.  
@@ -140,31 +163,7 @@ A Mandatory option is only the option "-i, --tsplibfile". Here, mandatory
 means that without specifying this option, the program won't work,
 since there is no input file. 
 
-All the other options take some default values. The default values for
-these are:
-
--r, --tries       : 10
--s, --tours       : 100
--t, --time        : 10 /* seconds */
--o, --optimum     : 1
--m, --ants        : 25
--g, --nnants      : 20
--a, --alpha       : 1
--b, --beta        : 2
--e, --rho         : 0.5
--q, --q0          : 0.0
--c, --elitistants : 100
--f, --rasranks    : 6
--k, --nnls        : 20
--l, --localsearch : 3 /* use 3-opt */
--d, --dlb         : 1 
--u, --as          : 0
--v, --eas         : 0
--w, --ras         : 0 
--x, --mmas        : 1 /* apply MAX-MIN Ant System */
--y, --bwas        : 0
-
-
+All the other options take some default values. 
 The default settings imply that as default MAX-MIN Ant System is run
 using a 3-opt local search procedure. Please note that these default
 values do not really make sense for some of the algorithms (e.g.,
@@ -175,11 +174,17 @@ use any of the ACO algorithms, make sure you set the appropriate
 parameter values. Typically, one may want to adjust the parameters
 
 -t, --time
+
 -o, --optimum
+
 -m, --ants
+
 -b, --beta
+
 -e, --rho 
+
 -q, --q0
+
 -l, --localsearch
 
 Note that only one option among -u --as, -v --eas, -w --ras,
