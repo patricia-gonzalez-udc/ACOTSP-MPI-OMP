@@ -17,50 +17,67 @@ GNU General Public Licence.
 If you use ACOTSP-MPI-OMP in your research, I would appreciate a 
 citation in your publication(s). 
 
-
-=========
-CONTENTS
-=========
+# CONTENTS
 
 The main control routines, main:
+
 acotsp.c
 
 Procedures to implement the ants behaviour:
+
 ants.c
+
 ants.h
 
 Procedures related to MPI communications:
+
 parallel.c
+
 parallel.h
 
 Input / output / statistics routines:
+
 InOut.c
+
 InOut.h
 
 Procedures specific to the TSP:
+
 TSP.c
+
 TSP.h
 
 Local search procedures:
+
 ls.c
+
 ls.h
 
 Additional useful / helping procedure:
+
 utilities.c
+
 utilities.h
 
 Command line parser:
+
 parse.c
+
 parse.h
 
 Time measurement:
+
 timer.h 
+
 dos_timer.c  : default timer implementation based on clock()
+
 unix_timer.c : in case you want to use rusage() instead, edit the
                Makefile to use this one or compile with 'make TIMER=unix'
 
 An example of makefile:
+
 Makefile 
+
   This makefile assumes the use of intel compilers
   and libraries for C and MPI. The code is written 
   in ANSI C and MPI 2.0. Hence, the code should be
@@ -69,6 +86,7 @@ Makefile
   adapt the makefile for your own testbed. 
 
 Instances: lin318.tsp and pr2392.tsp. 
+
   Other TSP instances are available from TSPLIB
   (http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/index.html),
   the webpage for the 8th DIMACS Implementation Challenge on the TSP
@@ -78,9 +96,7 @@ Instances: lin318.tsp and pr2392.tsp.
 
 
 
-======
-USAGE
-======
+# USAGE
 
 Given the large number of ACO algorithms, also the number of command
 line options is relatively large.
@@ -174,13 +190,12 @@ Examples for running an experiments are:
 ./acotsp -i lin318.tsp -v -t 60. -o 42029 -m 50 -b 5
 
 
-=======
-OUTPUT
-=======
+# OUTPUT
 
 Every experiment produces two main files. These files are: 
 
 summary.tsplibfilename.threads.numberThreads.mpi.numberColonies
+
 cc.tsplibfilename.threads.numberThreads.mpi.numberColonies
 
 where tsplibfilename is the instance identifier of the instance under
@@ -209,7 +224,9 @@ Additionally, the following three files can also be produced (see commented line
 in the “InOut.c” file).
 
 best.tsplibfilename.threads.numberThreads.mpi.Colony
+  
 cmp.tsplibfilename.threads.numberThreads.mpi.Colony
+  
 stat.tsplibfilename.threads.numberThreads.mpi.Colony
 
 These files provide more information for each specific colony 
