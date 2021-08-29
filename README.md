@@ -115,7 +115,7 @@ The executable 'acotsp' provides the following command line options
 
 -t, --time           # maximum time for each trial
 
-    --seed           # seed for the random number generator 
+--seed               # seed for the random number generator 
     
 -i, --tsplibfile     f inputfile (TSPLIB format necessary)
 
@@ -221,7 +221,9 @@ starts with
 begin try <trial_number> …
 
 then, each time the algorithm finds a new best solution a line with the pair
+
 <best-solution-found>  <time>
+  
 is added.
 
 
